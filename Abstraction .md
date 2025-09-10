@@ -1,35 +1,102 @@
-# 🐍 Python OOP: Abstract Class & Method Example
 
-## 🎯 AIM
+## AIM
 
-To create an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle`.
-
+Define the abstract base class named Polygon and also define the abstract method. This base class inherited by the various subclasses. Implement the abstract method in each subclass. Create the object of the subclasses and invoke the sides() method.
 ---
 
 ## 🧠 ALGORITHM
+```
+Start
 
-1. **Import ABC module**:
-   - Use `from abc import ABC, abstractmethod` to define abstract classes and methods.
+Import Module
 
-2. **Create Abstract Class `Shape`**:
-   - Define an abstract method `calculate_area()` with `@abstractmethod`.
+Import ABC and abstractmethod from the abc module.
 
-3. **Create Subclass `Rectangle`**:
-   - Set default values for `length` and `breadth`.
-   - Override `calculate_area()` to compute the rectangle area.
+Define Abstract Base Class
 
-4. **Create Subclass `Circle`**:
-   - Set default value for `radius`.
-   - Override `calculate_area()` to compute the circle area.
+Create an abstract base class named Polygon.
 
-5. **Create Objects & Call Methods**:
-   - Instantiate `Rectangle` and `Circle`.
-   - Call their `calculate_area()` methods.
+Inside it, declare an abstract method sides() using @abstractmethod.
 
----
+Define Subclass Triangle
 
-## 💻 Program
+Inherit from Polygon.
 
+Implement the sides() method to print: "Triangle has 3 sides".
+
+Define Subclass Square
+
+Inherit from Polygon.
+
+Implement the sides() method to print: "Square has 4 sides".
+
+Define Subclass Pentagon
+
+Inherit from Polygon.
+
+Implement the sides() method to print: "Pentagon has 5 sides".
+
+Create Objects of Subclasses
+
+Create an object of Triangle.
+
+Create an object of Square.
+
+Create an object of Pentagon.
+
+Invoke Methods
+
+Call the sides() method using the Triangle object.
+
+Call the sides() method using the Square object.
+
+Call the sides() method using the Pentagon object.
+
+Stop
+```
+
+## Program
+```
+from abc import ABC, abstractmethod
+
+class Polygon(ABC):
+    # Abstract method
+    @abstractmethod
+    def sides(self):
+        pass
+
+class Triangle(Polygon):
+    def sides(self):
+        print("Triangle has 3 sides")
+
+class Pentagon(Polygon):
+    def sides(self):
+        print("Pentagon has 5 sides")
+
+class Hexagon(Polygon):
+    def sides(self):
+        print("Hexagon has 6 sides")
+
+class square(Polygon):
+    def sides(self):
+        print("I have 4 sides")
+
+# Driver code
+t = Triangle()
+t.sides()
+
+s = square()
+s.sides()
+
+p = Pentagon()
+p.sides()
+
+k = Hexagon()
+k.sides()
+
+```
 ## Output
+<img width="489" height="216" alt="image" src="https://github.com/user-attachments/assets/8c5d05b7-5af4-435c-88c9-8524d55b3c1c" />
 
 ## Result
+The Program was Executed successfully
