@@ -1,29 +1,77 @@
-# 🐍 Python OOP: Encapsulation with Private Members
 
-## 🎯 AIM
+## AIM
 
-To implement **Encapsulation** in Python by defining a class `Rectangle` with **private member variables** `__length` and `__breadth`.
-
+Create a class Car with the private variables max_speed,name change the value of a private variable, Use a setter method  setMaxSpeed(). create an object of the class to invoke the methods
 ---
 
-## 🧠 ALGORITHM
+## ALGORITHM
+```
+Start
 
-1. **Define the Class**:
-   - Create a class `Rectangle` with two private attributes: `__length` and `__breadth`.
+Define Class Car
 
-2. **Initialize Variables**:
-   - Use the `__init__()` constructor to set initial values for `__length` and `__breadth`.
+Declare two private variables:
 
-3. **Print Values**:
-   - Display the private variables from within the class to demonstrate access.
+__max_speed
 
-4. **Instantiate the Object**:
-   - Create an object of the `Rectangle` class to trigger the constructor.
+__name
 
----
+Define Constructor
 
-## 💻 Program
+Initialize __max_speed and __name with default values.
 
+Define Setter Method
+
+Create a method setMaxSpeed(new_speed) that updates the private variable __max_speed.
+
+Define Display Method
+
+Create a method display() to print car name and max speed.
+
+Create Object
+
+Create an object of Car.
+
+Call Methods
+
+Use display() to show initial values.
+
+Use setMaxSpeed() to update the max speed.
+
+Again call display() to show updated values.
+
+Stop
+```
+
+##  Program
+```
+class Car:
+
+    __maxspeed = 0
+    __name = ""
+    
+    def __init__(self):
+        self.__maxspeed = 200
+        self.__name = "Supercar"
+    
+    def drive(self):
+        print('driving. maxspeed ' + str(self.__maxspeed))
+
+    # Setter method to change the value of maxspeed
+    def setMaxSpeed(self, speed):
+        self.__maxspeed = speed
+
+# Create object
+redcar = Car()
+redcar.drive()
+
+# Change the maxspeed to 320
+redcar.setMaxSpeed(320)
+redcar.drive()
+
+```
 ## Output
+<img width="487" height="152" alt="image" src="https://github.com/user-attachments/assets/807c26e1-921b-4b82-b086-9c90cb18ef0f" />
 
 ## Result
+The Program was exected successfully
